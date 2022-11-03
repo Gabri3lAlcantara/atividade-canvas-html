@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triângulos juntos</title>
+  <style>
+    canvas{border:1px solid rgb(0, 0, 0);}
+  </style>
+</head>
+<body>
+
+<canvas width="600" height="600"></canvas>
+
+
+
+<script>
+  const canvas = document.querySelector('canvas');
+  const ctx = canvas.getContext('2d');
+
+//TX e TY = Triângulo X e Triângulo Y.
+			TX = 300;
+			TY = 100;
+
+			TX = 200;
+			TY = 50;
+
+            //preencher triângulo
+			ctx.strokeStyle="blue";
+			ctx.fillStyle = "transparent";
+			ctx.beginPath();
+			ctx.moveTo(TX,TY);
+		    ctx.lineTo(TX-50,TY+80);
+		    ctx.lineTo(TX+50,TY+80);
+		    ctx.lineTo(TX,TY);
+		    ctx.stroke();
+
+		    TX = 250;
+			TY = 50;
+            //preencher o segundo triângulo adicionando valores para mudar a direção dele
+			ctx.strokeStyle="blue";
+			ctx.fillStyle = "transparent";
+			ctx.beginPath();
+			ctx.moveTo(TX,TY);
+		    ctx.lineTo(TX-50,TY+80);
+		    ctx.lineTo(TX+50,TY+80);
+		    ctx.lineTo(TX,TY);
+		    ctx.stroke();
+</script>
+</body>
+</html>
